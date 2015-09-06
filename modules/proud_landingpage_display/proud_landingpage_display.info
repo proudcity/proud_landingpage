@@ -1,7 +1,7 @@
-name = Helm Landing Page Display
-description = Panels configuration for Helm Landing Page
+name = Proud Landing Page Display
+description = Panels configuration for Proud Landing Page
 core = 7.x
-package = Helm Display
+package = Proud Display
 dependencies[] = ctools
 dependencies[] = defaultconfig
 dependencies[] = helm_landingpage

@@ -17,6 +17,12 @@ function proud_landingpage_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -33,6 +39,12 @@ function proud_landingpage_field_default_field_instances() {
           ),
         ),
         'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 0,
       ),
       'live_results_search' => array(
@@ -70,7 +82,7 @@ function proud_landingpage_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 5,
+      'weight' => 3,
     ),
   );
 
@@ -80,6 +92,12 @@ function proud_landingpage_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'media_formatters',
@@ -100,6 +118,12 @@ function proud_landingpage_field_default_field_instances() {
           'v_class' => 'embed-responsive-16by9',
         ),
         'type' => 'flexible_media',
+        'weight' => 0,
+      ),
+      'list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 0,
       ),
       'live_results_search' => array(
@@ -151,7 +175,59 @@ function proud_landingpage_field_default_field_instances() {
         ),
       ),
       'type' => 'file_angular_media',
-      'weight' => 4,
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'node-landingpage-field_subtitle'
+  $field_instances['node-landingpage-field_subtitle'] = array(
+    'bundle' => 'landingpage',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+      'list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_subtitle',
+    'label' => 'Subtitle',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 1,
     ),
   );
 
@@ -159,6 +235,7 @@ function proud_landingpage_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Body');
   t('Media');
+  t('Subtitle');
 
   return $field_instances;
 }

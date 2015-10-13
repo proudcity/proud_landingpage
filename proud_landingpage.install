@@ -18,7 +18,7 @@ function proud_landingpage_install() {
   	// Content Type settings
   	module_load_include('inc', 'proud_core', 'includes/proud_core.settings');
   	proud_core_content_settings($type);
-  	variable_set("pathauto_node_$type_pattern", "landingpages/[node:title]");
+  	variable_set("pathauto_node_$type_pattern", "[node:title]");
 
 	  // Enable *_display submodule
   	proud_core_enable_display("proud_$type");

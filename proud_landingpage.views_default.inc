@@ -38,20 +38,6 @@ function proud_landingpage_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Sort criterion: Broken/missing handler */
-  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
-  $handler->display->display_options['sorts']['weight']['table'] = 'menu_links';
-  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
-  /* Contextual filter: Broken/missing handler */
-  $handler->display->display_options['arguments']['plid']['id'] = 'plid';
-  $handler->display->display_options['arguments']['plid']['table'] = 'menu_links';
-  $handler->display->display_options['arguments']['plid']['field'] = 'plid';
-  $handler->display->display_options['arguments']['plid']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['plid']['default_argument_type'] = 'php';
-  $handler->display->display_options['arguments']['plid']['default_argument_options']['code'] = 'return proud_landingpage_get_mlid_for_node($view, $argument);';
-  $handler->display->display_options['arguments']['plid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['plid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['plid']['summary_options']['items_per_page'] = '25';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -62,6 +48,8 @@ function proud_landingpage_views_default_views() {
 
   /* Display: Content pane */
   $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
+  $handler->display->display_options['pane_title'] = 'Landing page children';
+  $handler->display->display_options['pane_description'] = 'Content that falls under the landing page in the menu structure';
   $export['landingpage_children'] = $view;
 
   return $export;
